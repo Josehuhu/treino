@@ -122,7 +122,7 @@ export function DailyDataForm({ isOpen, onClose, onSave, data }: DailyDataFormPr
             </Label>
             <Slider
               value={[hydration]}
-              onValueChange={(v) => setHydration(v[0])}
+              onValueChange={(v: number[]) => setHydration(v[0] ?? hydration)}
               min={0}
               max={5000}
               step={100}
@@ -142,7 +142,7 @@ export function DailyDataForm({ isOpen, onClose, onSave, data }: DailyDataFormPr
             </Label>
             <Slider
               value={[sleep]}
-              onValueChange={(v) => setSleep(v[0])}
+              onValueChange={(v: number[]) => setSleep(v[0] ?? sleep)}
               min={0}
               max={12}
               step={0.5}
@@ -162,7 +162,7 @@ export function DailyDataForm({ isOpen, onClose, onSave, data }: DailyDataFormPr
             </Label>
             <Slider
               value={[motivation]}
-              onValueChange={(v) => setMotivation(v[0])}
+              onValueChange={(v: number[]) => setMotivation(v[0] ?? motivation)}
               min={1}
               max={5}
               step={1}
