@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from 'react'
 import { createClient } from './utils/supabase-client'
 import { Layout } from './components/Layout'
@@ -10,7 +11,7 @@ import { Input } from './components/ui/input'
 import { Label } from './components/ui/label'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs'
-import { toast, Toaster } from 'sonner@2.0.3'
+import { toast, Toaster } from 'sonner'
 import { signup } from './utils/api'
 import * as api from './utils/api'
 
@@ -211,7 +212,7 @@ export default function App() {
           </CardHeader>
           
           <CardContent>
-            <Tabs value={authMode} onValueChange={(v) => setAuthMode(v as 'signin' | 'signup')}>
+            <Tabs value={authMode} onValueChange={(v: string) => setAuthMode(v as 'signin' | 'signup')}>
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="signin">Entrar</TabsTrigger>
                 <TabsTrigger value="signup">Cadastrar</TabsTrigger>

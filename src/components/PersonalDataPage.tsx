@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs'
 import { DailyDataForm } from './DailyDataForm'
 import { ProgressChart } from './ProgressChart'
-import { toast } from 'sonner@2.0.3'
+import { toast } from 'sonner'
 import * as api from '../utils/api'
 
 interface DailyData {
